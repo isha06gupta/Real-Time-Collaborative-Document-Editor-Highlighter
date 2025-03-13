@@ -1,83 +1,76 @@
-# **Real-Time Collaborative Document Editor & Highlighter**  
+# Real-Time Collaborative Document Editor & Highlighter  
 
-## 🚀 **Overview**  
-This project is a **full-featured real-time document editor** built using **Firebase Firestore** and **JavaScript (ES6+)**. It supports **multi-user collaboration**, advanced text editing, and AI-powered suggestions. The editor allows multiple users to edit the same document simultaneously, track changes, and enhance productivity with smart AI-based features.  
-
----  
-
-## 🌟 **Features**  
-
-### **🛠️ Phase 1: Foundation Setup**  
-✅ **Real-Time Collaboration**  
-- Built using **Firebase Firestore** for real-time text syncing.  
-- Handles conflict resolution (last edit wins).  
-- Multiple users can edit the same document simultaneously.  
-
-✅ **Basic Styling + Floating Toolbar**  
-- Floating toolbar for text styling: **Bold, Italics, Underline**.  
-- Options for **font size, color, and line spacing**.  
-- Toolbar appears only when text is selected.  
+## 🚀 Overview  
+This project is a fully functional real-time document editor built with **Firebase Firestore** and **JavaScript (ES6+)**. It allows multiple users to work on the same document simultaneously, track changes, and get AI-based suggestions for improved writing.  
 
 ---  
 
-### **🏆 Phase 2: Collaboration Expansion**  
-✅ **User Presence & Cursor Tracking**  
-- Displays user-specific colored cursors with user names.  
-- Active users list shows who is currently editing.  
+## 🌟 Key Features  
 
-✅ **Version Control**  
-- Saves document state at regular intervals or on explicit save.  
-- Provides a sidebar for viewing and reverting previous versions.  
+### 🛠️ **Phase 1: Foundation Setup**  
+- **Real-Time Collaboration** using Firebase Firestore for smooth multi-user syncing.  
+- Handles editing conflicts with a "last edit wins" approach.  
+- Seamless text syncing with minimal lag.  
 
----  
-
-### **📆 Phase 3: External API Integration**  
-✅ **Google OAuth for Authentication**  
-- Secure login using **Google OAuth**.  
-- Displays user profile image and name.  
-- Role-based editing permissions (owner, editor, viewer).  
-  
-
-✅ **To-Do List Integration**  
-- Collapsible sidebar for task management.  
-- Tasks synced across users using **Firebase**.  
-- Option to assign tasks to specific users.  
+- **Floating Toolbar for Styling**  
+   - Supports **bold, italics, underline**, font size, color, and line spacing.  
+   - Toolbar appears only when text is selected, keeping the UI clean.  
 
 ---  
 
-### **🧠 Phase 4: AI Enhancement**  
-✅ **Thesaurus API for Synonyms**  
-- Suggests synonyms via a floating toolbar button.  
-- Displays suggestions in a small popup.  
+### 🏆 **Phase 2: Collaboration Expansion**  
+- **User Presence & Cursor Tracking**  
+   - Displays user-specific colored cursors with names.  
+   - Shows an "Active Users" list for better collaboration.  
 
-✅ **Grammar Checking**  
-- AI-powered grammar checking using **LanguageTool API**.  
-- Displays suggestions with **Accept/Ignore** options.  
-
-✅ **AI Suggestions (Smart Completion)**  
-- Smart phrase suggestions using **OpenAI API**.  
-- Provides alternative phrasing and improvements.  
+- **Version Control**  
+   - Saves document state automatically or on demand.  
+   - Allows users to view and revert to previous versions.  
 
 ---  
 
-### **🛠️ Phase 5: Final Polish + Testing**  
-✅ **UI Cleanup and Refinement**  
-- Responsive design for all screen sizes.  
-- Consistent color themes and font sizes.  
-- Cross-browser compatibility.  
+### 📆 **Phase 3: External API Integration**  
+- **Google OAuth for Authentication**  
+   - Secure login with Google.  
+   - Displays user profile info and manages role-based permissions.  
 
-✅ **Performance Optimization**  
-- Optimized real-time syncing to prevent lag.  
-- Reduced memory load and fast version history loading.  
-
-✅ **Final Testing + Debugging**  
-- Tested with multiple users for sync issues.  
-- Fixed merge conflicts and performance bottlenecks.  
-- Set up error tracking with **Sentry** for real-time bug reports.  
+- **To-Do List Integration**  
+   - In-editor task list synced across users with Firebase.  
+   - Tasks can be assigned to specific users.  
 
 ---  
 
-## 🚀 **Tech Stack**  
+### 🧠 **Phase 4: AI Enhancement**  
+- **Synonym Suggestions**  
+   - Integrated Thesaurus API to provide better word choices.  
+   - Suggestions appear in a small pop-up next to the selected word.  
+
+- **Grammar Checking**  
+   - AI-based grammar suggestions using LanguageTool API.  
+   - "Accept/Ignore" options for easy correction.  
+
+- **Smart Suggestions**  
+   - OpenAI-based suggestions for better phrasing and improvements.  
+   - Suggestions appear below the current line.  
+
+---  
+
+### 🛠️ **Phase 5: Final Touches**  
+- **UI Cleanup**  
+   - Responsive design across all screen sizes.  
+   - Consistent fonts and color themes for a polished look.  
+
+- **Performance Optimization**  
+   - Fast syncing and reduced memory load.  
+   - Quick loading of version history and minimal lag.  
+
+- **Final Testing & Debugging**  
+   - Tested with multiple users for sync issues.  
+   - Fixed performance issues and set up error tracking with Sentry.  
+
+---  
+
+## 🏆 Tech Stack  
 - **Frontend:** HTML, CSS, JavaScript (ES6+)  
 - **Backend:** Firebase Firestore  
 - **APIs:** OpenAI, LanguageTool, Google OAuth, Thesaurus API  
@@ -85,19 +78,11 @@ This project is a **full-featured real-time document editor** built using **Fire
 
 ---  
 
-## 💡 **Outcome**  
-✅ Enhanced user experience with real-time editing and collaboration.  
-✅ AI-driven writing assistance for improved productivity.  
-✅ Secure login and role-based access for controlled editing.  
-✅ Fast, reliable, and scalable solution.  
+## 💡 Future Scope  
+- Offline editing with automatic sync on reconnection.  
+- Support for additional file formats like PDF and DOCX.  
+- Improved AI suggestions with more context awareness.  
 
 ---  
 
-### ⭐ **Future Improvements**  
-- Add support for offline editing with auto-sync on reconnection.  
-- Integrate additional language models for smarter suggestions.  
-- Expand file format support (e.g., PDF, DOCX).  
-
----  
-
-💻 **Contributions and suggestions are welcome!** 😎  
+**Feel free to contribute or share your suggestions!** 😎  
