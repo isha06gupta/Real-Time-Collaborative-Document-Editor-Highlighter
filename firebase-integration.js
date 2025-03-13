@@ -6,12 +6,12 @@ function initializeFirebase() {
   console.log("Initializing Firebase...");
 
   const firebaseConfig = {
-    apiKey: "AIzaSyDRumUP2WAhzp-KyS8AcSc-lPsksJC_Jyk",
-    authDomain: "highlighter1-1da83.firebaseapp.com",
-    projectId: "highlighter1-1da83",
-    storageBucket: "highlighter1-1da83.appspot.com",
-    messagingSenderId: "242503177277",
-    appId: "1:242503177277:web:f33a0651eea69e91898654",
+    apiKey: "YOUR API JEY",
+    authDomain: "YOUR AUTH_DOMAIN",
+    projectId: "YPIR PROJECT  ID",
+    storageBucket: "STORAGE BUCKET",
+    messagingSenderId: "MESSAGING SENDER ID",
+    appId: "APP ID",
   };
 
   if (!firebase.apps.length) {
