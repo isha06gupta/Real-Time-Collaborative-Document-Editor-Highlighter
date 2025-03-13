@@ -1,88 +1,109 @@
-# Real-Time Collaborative Document Editor & Highlighter  
+# 📝 Real-Time Collaborative Document Editor  
+This project is a real-time collaborative document editor designed to make writing and editing more efficient, seamless, and smart. Built using **Firebase Firestore** and **JavaScript (ES6+),** it allows multiple users to work on the same document simultaneously while providing real-time syncing, AI-powered suggestions, and a user-friendly interface. Whether you're working alone or with a team, this editor ensures a smooth and productive writing experience.  
 
-## 🚀 Overview  
-This project is a fully functional real-time document editor built with **Firebase Firestore** and **JavaScript (ES6+)**. It allows multiple users to work on the same document simultaneously, track changes, and get AI-based suggestions for improved writing.  
+---
 
----  
+## 🚀 Key Features  
 
-## 🌟 Key Features  
+### 🌐 Real-Time Syncing  
+- The editor syncs changes instantly using **Firebase Firestore**, allowing multiple users to work on the same document without conflicts or lag.  
+- Handles conflict resolution automatically so that the latest changes are reflected correctly, even when multiple users are editing at once.  
+- Unlike Microsoft Editor, this tool supports true multi-user collaboration with live cursor tracking and user presence.  
 
-### 🛠️ **Phase 1: Foundation Setup**  
-- **Real-Time Collaboration** using Firebase Firestore for smooth multi-user syncing.  
-- Handles editing conflicts with a "last edit wins" approach.  
-- Seamless text syncing with minimal lag.  
+---
 
-- **Floating Toolbar for Styling**  
-   - Supports **bold, italics, underline**, font size, color, and line spacing.  
-   - Toolbar appears only when text is selected, keeping the UI clean.  
+### 🎯 Intelligent Text Highlighting  
+- Supports line-by-line highlighting with customizable colors.  
+- When you select a line, the editor highlights it and automatically scrolls to keep the highlighted text vertically centered for better focus.  
+- The highlight color can be changed using a color picker, giving you full control over the visual experience.  
 
----  
+---
 
-### 🏆 **Phase 2: Collaboration Expansion**  
-- **User Presence & Cursor Tracking**  
-   - Displays user-specific colored cursors with names.  
-   - Shows an "Active Users" list for better collaboration.  
+### 🖋️ Floating Toolbar for Rich Text Formatting  
+- A clean and responsive floating toolbar appears only when text is selected, ensuring an uncluttered interface.  
+- Supports essential formatting options:  
+   - **Bold** – Make key points stand out.  
+   - **Italics** – Add emphasis or tone to your writing.  
+   - **Underline** – Highlight key terms and phrases.  
+   - **Font Size and Type** – Customize the look and feel of the text.  
+   - **Line Spacing** – Adjust line spacing for better readability.  
+- The toolbar ensures a smooth editing experience with intuitive controls.  
 
-- **Version Control**  
-   - Saves document state automatically or on demand.  
-   - Allows users to view and revert to previous versions.  
+---
 
----  
+### 🧮 Real-Time Word Count  
+- Keeps track of the total word count in real time as you type.  
+- The word count is displayed at the bottom of the editor, helping you stay within target limits.  
 
-### 📆 **Phase 3: External API Integration**  
-- **Google OAuth for Authentication**  
-   - Secure login with Google.  
-   - Displays user profile info and manages role-based permissions.  
+---
 
-- **To-Do List Integration**  
-   - In-editor task list synced across users with Firebase.  
-   - Tasks can be assigned to specific users.  
+### 👥 User Presence and Cursor Tracking  
+- Displays the names and cursors of other active users in real time.  
+- Each user is assigned a unique cursor color, making it easy to see who is working on which section of the document.  
+- An "Active Users" list is shown at the top, so you know who’s currently working on the document.  
 
----  
+---
 
-### 🧠 **Phase 4: AI Enhancement**  
-- **Synonym Suggestions**  
-   - Integrated Thesaurus API to provide better word choices.  
-   - Suggestions appear in a small pop-up next to the selected word.  
+### 🗂️ Version Control  
+- The editor automatically saves document states at regular intervals.  
+- A sidebar allows users to view past versions and restore any previous state with a single click.  
+- Provides a secure backup system, so you don’t have to worry about losing your progress.  
 
-- **Grammar Checking**  
-   - AI-based grammar suggestions using LanguageTool API.  
-   - "Accept/Ignore" options for easy correction.  
+---
 
-- **Smart Suggestions**  
-   - OpenAI-based suggestions for better phrasing and improvements.  
-   - Suggestions appear below the current line.  
+### 🌙 Dark Mode  
+- Switch between light and dark themes with a single toggle.  
+- The dark mode reduces eye strain, especially during late-night editing sessions.  
+- Smooth transitions between themes ensure a consistent look and feel.  
 
----  
+---
 
-### 🛠️ **Phase 5: Final Touches**  
-- **UI Cleanup**  
-   - Responsive design across all screen sizes.  
-   - Consistent fonts and color themes for a polished look.  
+### 🔄 Auto-Save and Restore  
+- The content is saved automatically every **2 seconds** using `localStorage`, so you never lose your work.  
+- Reloading the page restores the last saved content instantly, ensuring you can pick up right where you left off.  
 
-- **Performance Optimization**  
-   - Fast syncing and reduced memory load.  
-   - Quick loading of version history and minimal lag.  
+---
 
-- **Final Testing & Debugging**  
-   - Tested with multiple users for sync issues.  
-   - Fixed performance issues and set up error tracking with Sentry.  
+### 🧹 Clear Content with One Click  
+- A "Clear" button lets you remove all content instantly.  
+- If the document is cleared, a placeholder text ("Type or paste your text here...") automatically appears to guide the user.  
+- Helps maintain a clean slate for new ideas.  
 
----  
+---
 
-## 🏆 Tech Stack  
-- **Frontend:** HTML, CSS, JavaScript (ES6+)  
-- **Backend:** Firebase Firestore  
-- **APIs:** OpenAI, LanguageTool, Google OAuth, Thesaurus API  
-- **Tools:** Firebase
+### 📖 Synonym Suggestions with Thesaurus API  
+- Integrated with a **Thesaurus API** to provide real-time synonym suggestions.  
+- When you select a word and click the "Synonyms" button, a pop-up appears showing up to **10 synonym suggestions**.  
+- Improves vocabulary and helps find the right word without leaving the editor.  
+- This feature provides an edge over Microsoft Editor, which lacks direct synonym integration.  
 
----  
+---
 
-## 💡 Future Scope  
-- Offline editing with automatic sync on reconnection.  
-- Support for additional file formats like PDF and DOCX.  
-- Improved AI suggestions with more context awareness.  
+### ✅ AI-Powered Grammar Checking  
+- Uses **OpenAI** and **LanguageTool** to check for grammar mistakes in real time.  
+- Suggestions appear in a sidebar, with easy "Accept" and "Ignore" options.  
+- Helps you polish your writing and avoid common mistakes.  
 
----  
+---
 
-**Feel free to contribute or share your suggestions!** 😎  
+### 🤖 Smart Suggestions and Completion  
+- AI-powered suggestions help improve the tone, clarity, and phrasing of your writing.  
+- When a sentence sounds off, the editor offers alternative suggestions directly beneath the current line.  
+- Makes writing more natural and impactful with minimal effort.  
+
+---
+
+### 🚀 Performance and Compatibility  
+- Built for speed and efficiency — even with large documents.  
+- Optimized to work smoothly across different browsers and screen sizes.  
+- Uses minimal memory to ensure consistent performance without lag.  
+- Fully responsive, providing a seamless experience on desktops, tablets, and mobile devices.  
+
+---
+
+## 🎯 Why This Project Stands Out  
+This isn’t just another text editor — it’s a smart, collaborative platform that combines real-time syncing with AI-driven writing assistance. From styling to grammar correction and intelligent suggestions, it’s designed to make the writing process faster, more efficient, and more professional.  
+
+---
+
+This project reflects a balance of real-time collaboration, intelligent AI assistance, and a smooth user experience — making it the perfect tool for both personal and professional writing tasks. 😎  
