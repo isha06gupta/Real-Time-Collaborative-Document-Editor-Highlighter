@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highlight & Style Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="site-name">Highlight & Style Editor</div>
+</nav>
+
+<!-- Adjustment Panel -->
+<div class="adjustments">
+    <div class="word-count" id="word-count"><b>Word Count:</b> 0</div>
+
+    <!-- ✅ Fix 2: Add color box next to highlight color dropdown -->
+    <label for="highlight-color">Highlight Color:</label>
+    <input type="color" id="highlight-color" value="#ffff00" />
+
+    <label for="line-spacing">Line Spacing:</label>
+    <input type="range" id="line-spacing" min="1" max="3" step="0.1" value="1.6" />
+
+    <label for="font-size">Font Size:</label>
+    <input type="range" id="font-size" min="12" max="36" step="1" value="16" />
+
+    <label for="font-type">Font Type:</label>
+    <select id="font-type">
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="Garamond">Garamond</option>
+        <option value="Roboto">Roboto</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Lato">Lato</option>
+        <option value="Poppins">Poppins</option>
+        <option value="Pacifico">Pacifico</option>
+        <option value="Oswald">Oswald</option>
+    </select>
+
+    <label class="night-mode-label">Night Mode:</label>
+    <div class="night-mode-toggle">
+        <input type="checkbox" id="night-mode" class="checkbox" />
+        <label for="night-mode" class="label">
+            <div class="sun">🌞</div>
+            <div class="moon">🌙</div>
+            <div class="ball"></div>
+        </label>
+    </div>
+
+    <button id="start-btn" onclick="startHighlighting()">Start Highlighting</button>
+</div>
+
+<!-- Editable Content Area -->
+<div id="content-container">
+    <div id="content" contenteditable="true" class="content" 
+        onfocus="removePlaceholder()" onblur="addPlaceholder()">
+        Type or paste your text here...
+    </div>
+</div>
+
+<!-- Clear Button -->
+<button id="clear-btn" onclick="clearContent()">Clear</button>
+
+<!-- ✅ Fix 4: Floating Toolbar linked to JS functions -->
+<div id="floating-toolbar" class="floating-toolbar">
+    <button id="bold-btn"><b>B</b></button>
+    <button id="italic-btn"><i>I</i></button>
+    <button id="underline-btn"><u>U</u></button>
+</div>
+
+<!-- Load JavaScript files -->
+<script src="script.js"></script>
+<script src="./firebase-integration.js"></script>
+
+</body>
+</html>
